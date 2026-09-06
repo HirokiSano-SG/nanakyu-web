@@ -1,0 +1,64 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #fff;
+  color: #333;
+  font-family: Lato, "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.8;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+a { color: #666; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.site-header .logo { font-size: 1.3rem; font-weight: bold; color: #333; }
+.site-header nav a { margin-left: 24px; }
+.site-header nav a.current { color: #333; font-weight: bold; }
+
+.hero { width: 100%; height: auto; display: block; }
+
+main.wrap { padding: 40px 20px; }
+.lead h1 { font-size: 1.8rem; margin-bottom: 20px; }
+.lead p { max-width: 640px; }
+
+.gallery { margin-top: 40px; }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; height: auto; display: block; border-radius: 4px; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+.gallery-grid figcaption { text-align: center; margin-top: 8px; color: #666; }
+
+.page h1 { font-size: 1.6rem; border-bottom: 2px solid #eee; padding-bottom: 12px; }
+.page h2 { font-size: 1.2rem; margin-top: 32px; }
+.page h3 { font-size: 1.05rem; margin-top: 24px; }
+
+.info-table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+.info-table th, .info-table td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
+.info-table th { background: #f7f7f7; width: 160px; white-space: nowrap; }
+
+.post { margin-top: 20px; }
+.post-date { color: #999; font-size: 0.9rem; }
+
+.site-footer {
+  margin-top: 60px;
+  padding: 24px 0;
+  border-top: 1px solid #eee;
+  color: #999;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .site-header .wrap { flex-direction: column; align-items: flex-start; }
+  .site-header nav a { margin-left: 0; margin-right: 16px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+}
